@@ -5,8 +5,8 @@
         		<div class="date">
             			{{ post.published_date }}
         		</div>
-        		<h1><a href="">{{ post.title }}</a></h1>
-        		<p>Some sample text for this blog.</p>
+        		<h1><a href="{{ post.link }}">{{ post.title }}</a></h1>
+        		<p>{{ post.text }}</p>
     		</div>
 {% endfor %}
 {% endblock %}

@@ -4,6 +4,10 @@ from django.utils import timezone
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    link = models.TextField(default='')
+    text = models.TextField()
+    published_date = models.DateTimeField(
+            blank=True, null=True)
     
     def publish(self):
         self.published_date = timezone.now()
