@@ -37,7 +37,6 @@ def index(request):
     return HttpResponse("Hello, world. You're at the find text index.")
 
 def plotResults(request):
-    #from PIL import Image
     import glob
     from skimage import io
     from scipy.misc import toimage
