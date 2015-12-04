@@ -39,13 +39,11 @@ def index(request):
 def plotResults(request):
     import glob
     from skimage import io
-    from scipy.misc import toimage
     from sklearn import svm
     import numpy as np
     from skimage.io import imread
     from skimage.filters import threshold_otsu
     from skimage.transform import resize
-    #import cPickle
     from matplotlib import pyplot as plt
     from skimage.morphology import closing, square
     from skimage.measure import regionprops
@@ -58,12 +56,8 @@ def plotResults(request):
     import skimage
     from skimage import io
     from skimage.viewer import ImageViewer
-    from scipy.misc import toimage
     from skimage import feature
-    import scipy.ndimage as ndi
     from skimage.feature import hog
-    from random import randint
-    import random
     
     # Load last image
     documents = Document.objects.all()[Document.objects.count()-1]
